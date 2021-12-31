@@ -63,28 +63,19 @@ booksRouter.get('/:id',function(req,res){
 
 
 
-//router to delete book
-// booksRouter.post('/delete', function (req, res) {
+// router to delete book
+booksRouter.post('/delete', function (req, res) {
 
-//     const id = req.body.id;  
+    const id = req.body.id;  
 
-//     bookdata.findOneAndDelete({ _id: id })
-//         .then(function () {
+    bookdata.deleteOne({ _id: id })
+        .then(function () {
 
-//             res.redirect('/books')
+            res.redirect('/books')
 
-//         })  
-// })
-
-booksRouter.post('/delete',(req,res,next)=>{
-    const id = req.body.id;
-    bookdata.remove({_id:id})
-    .then(function(){
-        res.redirect('/books')
-
-    })
-    
+        })  
 })
+
 
 
 

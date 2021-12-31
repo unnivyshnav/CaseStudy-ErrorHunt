@@ -2,7 +2,7 @@ const express = require('express');
 const path = require ('path'); 
 const cors = require('cors');
 const bodyParser = require('body-parser') //Part #1 Point 2
-const nav = require ('./src/data/nav')
+const nav = require ('./src/data/nav')//Part#2 Point 6
 
 
 //Part#2 Point 6
