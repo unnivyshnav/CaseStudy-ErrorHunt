@@ -10,11 +10,12 @@ loginRouter.get('/',function(req,res){
 })
 
 
-loginRouter.post("/check",function(req,res){
+loginRouter.get("/check",function(req,res){
     var item = {
-        email:req.body.uid,//Part#2 point 10
-        password:req.body.pwd
+        email:req.query.uid,//Part#2 point 10
+        password:req.query.pwd
     };
+  
 
     
     userdata.findOne(
