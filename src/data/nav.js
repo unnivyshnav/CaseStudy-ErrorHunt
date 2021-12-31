@@ -1,3 +1,7 @@
+
+
+
+//Part#2 point 6
 const nav= [
     {
         link:"/books",
